@@ -24,5 +24,20 @@ class AgregarRutas:
         return "\n".join(urls)
 
 
-rutas = AgregarRutas("static")
+rutas = AgregarRutas(
+    [
+        ".git",
+        ".github",
+        ".venv",
+        "MyApp",
+        "__pycache__",
+        "static",
+        "quickstartproject",
+        "antenv",
+        "static",
+        "staticfiles",
+        "venv",
+    ]
+)
+
 print(rutas)
