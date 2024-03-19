@@ -34,6 +34,9 @@ agregar_rutas = AgregarRutas(
         "static",
         "quickstartproject",
         "antenv",
+        "static",
+        "staticfiles",
+        "venv",
     ]
 )
 
