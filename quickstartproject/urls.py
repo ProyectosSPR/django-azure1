@@ -15,9 +15,24 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
+from clases import AgregarRutas
 
-urlpatterns = [
-    path("", include("hello_azure.urls")),
-    path("admin/", admin.site.urls),
-]
+
+# Definir las rutas estáticas (por ejemplo, la de administración de Django)
+urlpatterns = []
+
+# Crear una instancia de AgregarRutas
+agregar_rutas = AgregarRutas(
+    [".git", ".github", ".venv", "MyApp", "__pycache__", "static", "quickstartproject"]
+)
+
+# Obtener la ruta generada como una cadena de texto
+ruta_generada = str(agregar_rutas)
+
+# Dividir la ruta generada en líneas individuales
+rutas_generadas = ruta_generada.strip().split("\n")
+
+# Agregar cada ruta generada a urlpatterns
+for ruta in rutas_generadas:
+    urlpatterns.append(eval(ruta))
