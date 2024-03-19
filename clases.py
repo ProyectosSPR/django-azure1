@@ -22,3 +22,7 @@ class AgregarRutas:
         urls = [f"path('', include('{carpeta}.urls'))" for carpeta in carpetas]
         print(carpetas)
         return "\n".join(urls)
+
+
+rutas = AgregarRutas("static")
+print(rutas)
