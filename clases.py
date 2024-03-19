@@ -20,11 +20,5 @@ class AgregarRutas:
 
         # Crear los patrones de URL por cada carpeta restante
         urls = [f"path('', include('{carpeta}.urls'))" for carpeta in carpetas]
-
+        print(carpetas)
         return "\n".join(urls)
-
-
-agregar_rutas = AgregarRutas(
-    [".git", ".github", ".venv", "MyApp", "__pycache__", "static", "quickstartproject"]
-)
-print(agregar_rutas)
