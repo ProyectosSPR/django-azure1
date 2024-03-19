@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from clases import AgregarRutas
+import django_extensions
 
 
 # Definir las rutas estáticas (por ejemplo, la de administración de Django)
