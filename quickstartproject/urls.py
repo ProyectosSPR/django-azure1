@@ -25,7 +25,16 @@ urlpatterns = []
 
 # Crear una instancia de AgregarRutas
 agregar_rutas = AgregarRutas(
-    [".git", ".github", ".venv", "MyApp", "__pycache__", "static", "quickstartproject"]
+    [
+        ".git",
+        ".github",
+        ".venv",
+        "MyApp",
+        "__pycache__",
+        "static",
+        "quickstartproject",
+        "antenv",
+    ]
 )
 
 # Obtener la ruta generada como una cadena de texto
