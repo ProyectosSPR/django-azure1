@@ -2,6 +2,8 @@
 <!doctype html>
 <head>
     <title>Hello Azure - Python Quickstart</title>
+  
+
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="icon"href="{% static 'favicon.ico' %}">
 </head>
@@ -14,6 +16,7 @@
             <h1 class="display-6 fw-bold">Hello {{name}}</h1>
             <p class="fs-5">
                 It is nice to meet you!
+                <p>{{ STATIC_URL }}</p>
             </p>
             <a href="{% url 'index' %}" class="btn btn-primary btn-lg px-4 gap-3">Back home</a>
           </div>
