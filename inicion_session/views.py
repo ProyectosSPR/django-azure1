@@ -4,9 +4,17 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
+from django.template import RequestContext
+
+
+from django.views.decorators.csrf import csrf_protect
+
+
+
+@csrf_protect
 @login_required
 def home_view(request):
-    return render(request, 'home.html')
+    return render(request, 'home.html',context_instance=RequestContext(request))
 
 def login_view(request):
     if request.method == 'POST':
@@ -22,8 +30,8 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('login')
+    return redirect('login',context_instance=RequestContext(request))
 
 @login_required
 def profile_view(request):
-    return render(request, 'profile.html')
+    return render(request, 'profile.html',context_instance=RequestContext(request))
