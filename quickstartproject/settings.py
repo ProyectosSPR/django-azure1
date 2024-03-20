@@ -16,11 +16,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "tu_clave_secreta"
+SECRET_KEY = "1234"
 
 DEBUG = os.getenv('DEBUG', False)
 
-ALLOWED_HOSTS = ['https://chatgptwhatsyfb.azurewebsites.net']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
