@@ -117,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es"
 
 TIME_ZONE = "UTC"
 
@@ -141,32 +141,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # settings.py
 # Agrega 'logging' a tus imports
-import logging
 
-# Configuración básica de logging
-# Configuración básica de logging
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',  # Puedes ajustar el nivel según tus necesidades
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        '': {
-            'handlers': ['console'],
-            'level': 'INFO',  # Capturará INFO y niveles superiores (WARNING, ERROR, CRITICAL)
-            'propagate': True,
-        },
-        'inicion_session': {
-            'handlers': ['console'],
-            'level': 'DEBUG',  # Capturará DEBUG y niveles superiores (INFO, WARNING, ERROR, CRITICAL)
-            'propagate': False,
-        },
-    },
-}
 
 
 
