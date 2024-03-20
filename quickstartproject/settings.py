@@ -46,6 +46,9 @@ INSTALLED_APPS = [
 
 LOGIN_URL = "login"
 LOGOUT_REDIRECT_URL = "login"
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = "Strict"
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
