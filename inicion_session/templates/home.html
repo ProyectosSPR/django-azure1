@@ -6,7 +6,7 @@
 <body>
     {% if user.is_authenticated %}
         <h2>Welcome, {{ user.username }}!</h2>
-            <h1>si genero la autenticacion</h1>
+            <h1>si genero la autenticacion corretamente</h1>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
             <button type="submit">Logout</button>
