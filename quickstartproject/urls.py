@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from clases import AgregarRutas
-import django_extensions
-
+from django.contrib.auth.views import LoginView
+from inicion_session import views
 
 # Definir las rutas estáticas (por ejemplo, la de administración de Django)
-urlpatterns = []
+urlpatterns = [
+    path("admin/", admin.site.urls),
+]
 
 # Crear una instancia de AgregarRutas
 agregar_rutas = AgregarRutas(
