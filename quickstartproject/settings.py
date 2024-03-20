@@ -44,10 +44,9 @@ INSTALLED_APPS = [
     "inicion_session",
 ]
 
-LOGIN_URL = "login"
-LOGOUT_REDIRECT_URL = "login"
-CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_SAMESITE = "Strict"
+LOGIN_REDIRECT_URL = 'profile'
+LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'login'
 
 
 MIDDLEWARE = [
