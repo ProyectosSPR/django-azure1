@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
-import django_extensions
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -156,7 +156,7 @@ LOGGING = {
             "class": "logging.FileHandler",
             "filename": "debug.log",
             "formatter": "verbose",
-<<<<<<< HEAD
+
         },
     },
     "loggers": {
@@ -164,8 +164,7 @@ LOGGING = {
             "handlers": ["console", "file"],
             "level": "DEBUG",
             "propagate": True,
-=======
->>>>>>> 8c2a28e0893dbbcfa5747c132c80f882f28f3070
+
         },
     },
     "loggers": {
