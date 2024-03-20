@@ -27,7 +27,7 @@ SECRET_KEY = "1234567890"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -46,8 +46,6 @@ INSTALLED_APPS = [
 
 LOGIN_URL = "login"
 LOGOUT_REDIRECT_URL = "login"
-CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_SAMESITE = "Strict"
 
 
 MIDDLEWARE = [
@@ -138,3 +136,33 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# settings.py
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "verbose",
+        },
+        "file": {
+            "level": "DEBUG",
+            "class": "logging.FileHandler",
+            "filename": "debug.log",
+            "formatter": "verbose",
+        },
+    },
+    "loggers": {
+        "": {  # 'root' Logger
+            "handlers": ["console", "file"],
+            "level": "DEBUG",
+            "propagate": True,
+        },
+    },
+}

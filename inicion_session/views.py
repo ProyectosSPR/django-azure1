@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login
+import logging
+
+logger = logging.getLogger("login_view")
 
 
 def login_view(request):
@@ -10,6 +14,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            logger.info(f"Usuario {user.username} ha iniciado sesión")
             return redirect("inicio")
     else:
         form = AuthenticationForm()
