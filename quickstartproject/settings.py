@@ -159,4 +159,11 @@ LOGGING = {
             "propagate": True,
         },
     },
+    "loggers": {
+        "": {  # 'root' Logger
+            "handlers": ["console", "file"],
+            "level": "DEBUG",
+            "propagate": True,
+        },
+    },
 }
