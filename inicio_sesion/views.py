@@ -1,13 +1,16 @@
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_protect
 
 
 # Create your views here.
+@csrf_protect
 def home(request):
     return render(request, "home.html")
 
 
+@csrf_protect
 def singup(request):
     if request.method == "GET":
         return render(request, "singup.html", {"form": UserCreationForm})
