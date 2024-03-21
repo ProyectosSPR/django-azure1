@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from clases import AgregarRutas
 from django.contrib.auth.views import LoginView
-from inicion_session import views
+
 
 # Definir las rutas estáticas (por ejemplo, la de administración de Django)
 urlpatterns = [
