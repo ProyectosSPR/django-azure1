@@ -57,7 +57,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('profile',{"user":user})  # Redirige al usuario a la página de perfil después del inicio de sesión
+            return redirect('profile')  # Redirige al usuario a la página de perfil después del inicio de sesión
     else:
         form = AuthenticationForm()
     
