@@ -18,13 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from clases import AgregarRutas
 from django.contrib.auth.views import LoginView
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 # Definir las rutas estáticas (por ejemplo, la de administración de Django)
 urlpatterns = [
     path("admin/", admin.site.urls),
-]
-
+] 
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # Crear una instancia de AgregarRutas
 agregar_rutas = AgregarRutas(
     [

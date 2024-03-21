@@ -34,9 +34,10 @@ CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = ["https://chatgptwhatsyfb.azurewebsites.net"]
 
 ALLOWED_HOSTS = ["chatgptwhatsyfb.azurewebsites.net"]
-
+# ALLOWED_HOSTS = []
 
 # Application definition
+
 
 INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
@@ -129,10 +130,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATICFILES_DIRS = (str(BASE_DIR.joinpath("static")),)
+STATICFILES_DIRS = [
+    str(BASE_DIR.joinpath("static")),
+]
+
 STATIC_URL = "static/"
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# producion STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
