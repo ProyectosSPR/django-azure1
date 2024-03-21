@@ -27,7 +27,7 @@ SECRET_KEY = "1234567890"
 DEBUG = True
 CSRF_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["chatgptwhatsyfb.azurewebsites.net"]
 
 
 # Application definition
