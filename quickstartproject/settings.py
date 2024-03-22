@@ -33,8 +33,8 @@ SECURE_SSL_REDIRECT = False
 CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = ["https://chatgptwhatsyfb.azurewebsites.net"]
 
-# ALLOWED_HOSTS = ["chatgptwhatsyfb.azurewebsites.net"]
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["chatgptwhatsyfb.azurewebsites.net"]
+# ALLOWED_HOSTS = []
 
 # Application definition
 
